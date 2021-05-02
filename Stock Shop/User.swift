@@ -8,7 +8,7 @@ struct User: Equatable, Codable{
     private var username: String
     private var password: String
     private var email: String
-    
+    //testign out functionality of changes
     
 }
 import Foundation
