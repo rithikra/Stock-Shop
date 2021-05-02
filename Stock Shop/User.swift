@@ -9,6 +9,7 @@ struct User: Equatable, Codable{
     private var password: String
     private var email: String
     //testign out functionality of changes
+    //trying to commit again
     
 }
 import Foundation
