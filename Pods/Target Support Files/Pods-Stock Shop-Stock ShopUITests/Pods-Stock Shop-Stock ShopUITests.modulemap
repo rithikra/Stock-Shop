@@ -1,0 +1,6 @@
+framework module Pods_Stock_Shop_Stock_ShopUITests {
+  umbrella header "Pods-Stock Shop-Stock ShopUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
