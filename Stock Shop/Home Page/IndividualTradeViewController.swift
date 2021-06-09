@@ -11,6 +11,7 @@ import EventKit
 import EventKitUI
 import MessageUI
 
+//the viewer for showing individual trades
 class IndividualTradeViewController: UIViewController, MFMessageComposeViewControllerDelegate{
     
     //create new message
@@ -46,11 +47,12 @@ class IndividualTradeViewController: UIViewController, MFMessageComposeViewContr
     @IBOutlet weak var currentPriceLabel: UILabel!
     @IBOutlet weak var changeLabel: UILabel!
     
-    
+    //deleting the stock
     @IBAction func deleteButtonTapped(_ sender: Any) {
         currentUser.deleteStock(index: currentUser.selectedIndex!)
         self.dismiss(animated: false, completion: nil)
     }
+    //crreating a calendar aalert -- eventKIT
     @IBAction func createAlertButtonTapped(_ sender: Any) {
         let store = EKEventStore.init()
         store.requestAccess(to: .event) { (granted, error) in
@@ -78,12 +80,12 @@ class IndividualTradeViewController: UIViewController, MFMessageComposeViewContr
         }
         
     }
-    
+    //just going back to the older screen
     @IBAction func backButtonTapped(_ sender: Any) {
         //self.dismiss()
         self.dismiss(animated: false, completion: nil)
     }
-    
+    //messageUI --> showing messageKIT
     @IBAction func shareButtonTapped(_ sender: Any) {
         let composeVC = MFMessageComposeViewController()
         composeVC.messageComposeDelegate = self

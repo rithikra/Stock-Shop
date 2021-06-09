@@ -15,7 +15,7 @@ class SearchPageViewController: UIViewController{
     override func viewDidLoad() {
         
     }
-
+    //resign keyboard
     @IBAction func tapRecognized(_ sender: Any) {
         self.becomeFirstResponder()
         SearchText.resignFirstResponder()
@@ -23,6 +23,7 @@ class SearchPageViewController: UIViewController{
     @IBOutlet weak var SearchText: UITextField!
     
     @IBOutlet weak var errorMessageField: UILabel!
+    //go back to old screen
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
         //dismiss view
@@ -30,7 +31,7 @@ class SearchPageViewController: UIViewController{
         impactFeedbackgenerator.prepare()
         impactFeedbackgenerator.impactOccurred()
     }
-    
+    //search and see if stock exsts
     @IBAction func submitButtonTapped(_ sender: Any){
         let currentText = SearchText.text
         if (currentText == "" || currentText == nil){
@@ -54,7 +55,7 @@ class SearchPageViewController: UIViewController{
             })
         }
     }
-    
+    //change labels based on if stock exists
     func labelChange(_ code: Int){
         DispatchQueue.main.async {
             if (code == 1){
@@ -76,6 +77,7 @@ class SearchPageViewController: UIViewController{
             
         
     }
+    //save the stock and add to the user's list and add to persistent storage
     @IBAction func saveButtonTapped(_ sender: Any) {
         //make sure that stock is verified before if i have time
         _ = Stock(symbol: pageSymbol, completion: {

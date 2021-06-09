@@ -31,7 +31,7 @@ class TiingoRequest{
                     do{
                         //print("TESTING API CALL 2x")
                         let JSON = try JSONSerialization.jsonObject(with: data, options: [])
-                        print(JSON)
+                        //print(JSON)
                         
                             if let JSON = JSON as? [String: AnyObject] {
                                 if let name = JSON["name"] as? String{
@@ -84,12 +84,7 @@ class TiingoRequest{
                         
                             if let json = JSON as? Array<[String: AnyObject]> {
                                 let currentJSON = json[0]
-                                //print ("IT IS PARSING")
-                                //print(type(of: currentJSON["open"]))
-                                //print(type(of: currentJSON["close"]))
-                               // let convertedOpen = currentJSON["open"] as! Float
-                               // print(convertedOpen)
-                               // print(type(of: convertedOpen))
+                                
                                 if let open = currentJSON["open"] as? NSNumber, let close = currentJSON["close"] as? NSNumber {
                                     //print("if statement execution")
                                     returnArray.append(Double(open.floatValue))

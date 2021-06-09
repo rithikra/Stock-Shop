@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+//stock cell class
 class HomePageStockViewCell: UITableViewCell{
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!

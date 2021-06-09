@@ -32,7 +32,7 @@ class CalculatePageViewController: UIViewController{
         submitErrorButtonLabel.text = ""
         ResultView.isHidden = true
     }
-    
+    //submitting and checking if stock exists and gettinv alue
     @IBAction func submitButtonTapped(_ sender: Any) {
         //check for correct inputs
         //check if stock exists
@@ -88,6 +88,7 @@ class CalculatePageViewController: UIViewController{
         }
         //get all option data
     }
+    //resigning keyboard
     @IBAction func backgroundTapped(_ sender: Any) {
         symbolTextField.resignFirstResponder()
         predictionDateTextField.resignFirstResponder()
@@ -97,7 +98,7 @@ class CalculatePageViewController: UIViewController{
         self.becomeFirstResponder()
         
     }
-    
+    //changing the label --> showing what is hapening on calculate page
     func labelChange(_ code: Int){
         DispatchQueue.main.async { [self] in
             if (code == 1){
@@ -136,7 +137,7 @@ class CalculatePageViewController: UIViewController{
     @IBOutlet weak var confidenceIntervalSlider: UISlider!
     
     @IBOutlet weak var ReturnOutput: UILabel!
-        
+    //calculate and show the best option value
     @IBAction func calculateButtonTapped(_ sender: Any) {
         //text control / error
         
@@ -179,7 +180,7 @@ class CalculatePageViewController: UIViewController{
         //ReturnOutput.text = rvString
         print(rvString)
     }
-    
+    //the actual calculate function --> calculates the optimal value and returns the optoin value
     func calculate(minValue: Double, maxValue: Double, stockPrice: Double, optionList: [Option])->(Option, Double){
         _ = [(Option,Double)]()
         var max_ROI = 0.0
@@ -273,6 +274,7 @@ class CalculatePageViewController: UIViewController{
         
         
     }
+    //printing the actual results output
     func resultsOutput(option: Option, ROI: Double){
         resultsStockNameLabel.text = pageSymbol.uppercased()
         

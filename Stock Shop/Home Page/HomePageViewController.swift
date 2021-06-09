@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
-
+//main root view controller for homescreen
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var HomePageTableView: HomePageStockView!
@@ -44,21 +44,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             }
             
         }
-        //User.sharedInstance.load()
         
-       
-        
-        /*currentUser = User.sharedInstance
-        print(currentUser.getUsername())
-        var watchList = currentUser.getWatchList()
-        print("WATCHLIST: \(String(describing: watchList))")
-        let stockList = watchList!.getStockList()
-        var updatedStockList = [Stock]()
-        for stock in stockList{
-            stock.updateStockValues()
-            updatedStockList.append(stock)
-        }
-        watchList!.setStockList(setList: updatedStockList)*/
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -83,9 +69,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let stockList = currentUser.getWatchList()!.getStockList()
         let currentStock = stockList[indexPath.row]
         
-        //currentStock.updateStockValues(handler: <#(Stock) -> Void#>)
         
-        //print(currentStock)
         
        // Fetch the data for the row.
        // Configure the cell’s contents with data from the fetched object.
@@ -107,6 +91,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
         
     }
+    
+    //if selected --> haptfic feeback + new screen showing stock
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let watchList = currentUser.getWatchList()
         let stockList = watchList?.getStockList()
@@ -123,7 +109,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         //}
     }
     
-    
+    //logout and go back to login screen
     @IBAction func logOutTapped(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
@@ -148,24 +134,14 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             print(chosenStock.getPrice())
         }
     }
+    
+    //reload all dataa
     @IBAction func reloadButtonTapped(_ sender: Any) {
         let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
         impactFeedbackgenerator.prepare()
         impactFeedbackgenerator.impactOccurred()
         _ = currentUser.getWatchList()!.getStockList()
-        /*for index in 0..<stockList.count{
-            let currentStock = stockList[index]
-            currentStock.updateStockValues(handler: {
-                currentStock in
-                var tempWatchList = self.currentUser.getWatchList()
-                var tempStockList = tempWatchList?.getStockList()
-                tempStockList![index] = currentStock
-                tempWatchList?.setStockList(setList: tempStockList!)
-                self.currentUser.setWatchList(tempWatchList!)
-                self.currentUser.save()
-                //self.HomePageTableView.reloadData()
-            })
-        }*/
+        
         User.sharedInstance.load {
             DispatchQueue.main.async {
                 print("RELOADING DATA HERE")
@@ -177,6 +153,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
     }
+    //prepre for sending data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
         impactFeedbackgenerator.prepare()

@@ -25,51 +25,33 @@ class TradeCollectionViewController: UICollectionViewController, UICollectionVie
         impactFeedbackgenerator.prepare()
         impactFeedbackgenerator.impactOccurred()
         _ = currentUser.getWatchList()!.getStockList()
-        /*for index in 0..<stockList.count{
-            let currentStock = stockList[index]
-            currentStock.updateStockValues(handler: {
-                currentStock in
-                var tempWatchList = self.currentUser.getWatchList()
-                var tempStockList = tempWatchList?.getStockList()
-                tempStockList![index] = currentStock
-                tempWatchList?.setStockList(setList: tempStockList!)
-                self.currentUser.setWatchList(tempWatchList!)
-                self.currentUser.save()
-                //self.HomePageTableView.reloadData()
-            })
-        }*/
+        
         User.sharedInstance.load {
             DispatchQueue.main.async {
                 print("RELOADING DATA HERE")
-                //print(User.sharedInstance.getWatchList()?.getStockList().count)
-                //print(User.sharedInstance.getWatchList()?.getStockList()[0].getSymbol())
+               
                 self.collectionView.reloadData()
             }
         }
     }
+    //reloaind the data
     func viewwillAppear(){
         collectionView.delegate = self
         collectionView.dataSource = self
         User.sharedInstance.load {
             DispatchQueue.main.async {
                 print("RELOADING DATA HERE IN TRADE COLLECTION VIEW")
-                //print(User.sharedInstance.getWatchList()?.getStockList().count)
-               // print(User.sharedInstance.getWatchList()?.getStockList()[1].getSymbol())
+                
                 self.collectionView.reloadData()
             }
             
         }
-        
-        //let currentWatchlist = currentUser.getWatchList()
-        //print("CURRENT WATCHLIST: \(currentWatchlist)")
         currentUser = User.sharedInstance
         
         
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if currentUser.getTrades() != nil{
-            //print("GETTING CURRENT TRADES count")
-            //print(trades.count)
             return currentUser.getTrades()!.count
             
         }
@@ -109,7 +91,6 @@ class TradeCollectionViewController: UICollectionViewController, UICollectionVie
         var awidth = self.view.bounds.width
         var aheight = self.view.bounds.height
         aheight = aheight/4
-        //aheight = aheight
         awidth = awidth/2
         awidth = awidth - 6
         return CGSize(width: awidth, height: aheight)

@@ -464,7 +464,9 @@
                             <outletCollection property="gestureRecognizers" destination="uUJ-wR-IpV" appends="YES" id="wrV-AG-on6"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calculate" selectedImage="plus" catalog="system" id="HF2-NP-Xoz"/>
+                    <tabBarItem key="tabBarItem" title="Calculate" selectedImage="plus" catalog="system" id="HF2-NP-Xoz">
+                        <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="PriceDirectionSegControl" destination="FSw-Rp-RoM" id="zjh-nh-EXN"/>
                         <outlet property="ResultView" destination="h1l-lB-zPJ" id="Emy-o8-RGq"/>
@@ -488,7 +490,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1911.594202898551" y="474.77678571428567"/>
+            <point key="canvasLocation" x="2680" y="615"/>
         </scene>
         <!--Current Trades-->
         <scene sceneID="vWO-GC-S3I">
@@ -744,7 +746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWC-ls-rxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734.7826086956525" y="1135.0446428571429"/>
+            <point key="canvasLocation" x="3577" y="629"/>
         </scene>
         <!--Home-->
         <scene sceneID="nyt-Qx-cOb">
@@ -789,14 +791,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stockCell" id="dEx-U9-Bdk" customClass="HomePageStockViewCell" customModule="Stock_Shop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999999999999996" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dEx-U9-Bdk" id="H6Z-hk-9a6" customClass="HomePageStockViewCell">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0C-sx-7LM">
-                                                    <rect key="frame" x="261" y="4" width="133" height="18.5"/>
+                                                    <rect key="frame" x="261" y="4" width="133" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="133" id="N4w-Fs-0EV"/>
                                                     </constraints>
@@ -805,7 +807,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-fX-gwp">
-                                                    <rect key="frame" x="271" y="20" width="123" height="18.5"/>
+                                                    <rect key="frame" x="271" y="20" width="123" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="123" id="Aig-7x-gbv"/>
                                                     </constraints>
@@ -814,7 +816,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hr8-pU-HAE">
-                                                    <rect key="frame" x="20" y="7" width="82" height="28"/>
+                                                    <rect key="frame" x="20" y="7" width="82" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                                                     <color key="textColor" red="0.22839717909999999" green="0.4006614537" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -841,7 +843,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yew-8J-fb0">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="72.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yew-8J-fb0" id="Vct-wY-VDn">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -850,7 +852,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="9rs-at-olx">
-                                        <rect key="frame" x="0.0" y="115.5" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="116" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9rs-at-olx" id="9me-GO-CP6">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -1054,7 +1056,10 @@
         <scene sceneID="hm1-c9-6xY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cfP-ez-9wc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Trades" selectedImage="pencil" catalog="system" id="v1r-j5-cIA"/>
+                    <tabBarItem key="tabBarItem" title="Trades" id="v1r-j5-cIA">
+                        <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="pencil" catalog="system" symbolScale="medium" renderingMode="template"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uHl-Ve-xk7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
