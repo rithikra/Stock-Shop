@@ -20,6 +20,16 @@ Users also have the option to search for a stock and then add it to our watchlis
  
 </p>
 
+<br></br>
+
+The calculate tab allows users to input data regarding target price (minimum, maximum) an confidence interval to calculate the optimal option to buy to maximize profit in the timemframe suggested. The views below show the calculate tab and how each play is store on the trades tab.
+
+<p align="middle">
+ 
+  <img src = "DemoPhotos/5.jpeg" width = 200>
+  <img src = "DemoPhotos/6.jpeg" width = 200>
+ 
+</p>
 
 
-![test](DemoPhotos/1.jpeg)
+
