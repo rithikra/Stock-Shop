@@ -5,7 +5,6 @@ When launching the app, users will be prompted to create an account or log in to
 <p float="left">
  
   <img src = "DemoPhotos/1.jpeg" width = 200>
-  <br></br>
   <img src = "DemoPhotos/2.jpeg" width = 200>
  
 </p>
