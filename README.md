@@ -3,6 +3,6 @@ Full stack iOS Application allowing users to create, calculate, and store stock 
 
 When launching the app, users will be prompted to create an account or log in to their existing account.
 
-<img src = "DemoPhotos/1.jpep" width = 100>
+<img src = "DemoPhotos/1.jpeg" width = 100>
 
 ![test](DemoPhotos/1.jpeg)
