@@ -9,5 +9,17 @@ When launching the app, users will be prompted to create an account or log in to
  
 </p>
 
+<br></br>
+
+Users also have the option to search for a stock and then add it to our watchlist. In the example below, the user searches for a the Microsoft stock and then adds it to their own watchlist.
+
+<p align="middle">
+ 
+  <img src = "DemoPhotos/3.jpeg" width = 200>
+  <img src = "DemoPhotos/4.jpeg" width = 200>
+ 
+</p>
+
+
 
 ![test](DemoPhotos/1.jpeg)
